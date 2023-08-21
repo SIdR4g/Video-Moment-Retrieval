@@ -2,7 +2,7 @@
   <img src="vmr.png" alt="App Logo" width="200">
 </p>
 
-# Video Moment Retrieval App 🎥
+# Video Moment Retrieval WebApp 🎥
 
 <p align="center">
   <i>Find moments in videos effortlessly.</i>
