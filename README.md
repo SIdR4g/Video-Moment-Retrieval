@@ -75,7 +75,7 @@ We welcome contributions to enhance this project.
 
 ## Contact Us 📧
 
-If you have any questions or feedback, please don't hesitate to reach out at [sahasharad29@gmail.com](mailto:sahasharad29@gmail.com).
+If you have any questions or feedback, please don't hesitate to reach out at [siddyant34@gmail.com@gmail.com](mailto:siddyant34@gmail.com).
 
 <p align="center">
   <i>Discover the power of precise video retrieval with the Video Moment Retrieval App.</i>
