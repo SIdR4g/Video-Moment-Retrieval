@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    /* Loading spinner CSS */
+    .spinner {
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(106, 4, 4, 0.3);
+        /* Change the color here */
+        border-radius: 50%;
+        border-top: 4px solid #f72323;
+        /* Change the color here */
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+
+<!-- ##### Breadcrumb Area Start ##### -->
+<div class="vizew-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Breadcrumb Area End ##### -->
+
+<!-- ##### Contact Area Start ##### -->
+<section class="contact-area mb-80">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-7 col-lg-8">
+                <!-- Section Heading -->
+                <div class="section-heading style-2">
+                    <h4>VIDEO MOMENT RETRIEVAL</h4>
+                    <div class="line"></div>
+                </div>
+
+                <h6>From Query to Frame: Elevate Your Video Interaction. Uncover Precise Moments with Ease.</h6><br>
+                <p>VMR, a video moment retrieval app, designed to reshape how you interact with
+                    videos. Say goodbye to endless scrolling and searching—our app harnesses the power of your queries
+                    to instantly retrieve the most relevant timestamps from your videos. Whether it's reliving a winning
+                    goal, capturing a comic activity, or analyzing critical footage, our app transforms your queries
+                    into precise moments. Elevate your video experience with ease and efficiency. Embrace the future of
+                    video interaction today!</p><br>
+                <div class="section-heading style-2">
+                    <h4>UPLOAD VIDEO TO ANALYZE</h4>
+                    <div class="line"></div>
+                </div>
+
+                <form id="video-form" method="post" action="{% url 'upload_video' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="form-group">
+                        <button type="submit" class="btn vizew-btn mt-30" id="submit-button">Upload</button>
+                    </div>
+
+                    <div id="loading-spinner" class="spinner" style="display: none;"></div>
+
+                </form><br>
+
+            </div>
+
+            <div class="col-12 col-md-5 col-lg-4">
+                <div class="sidebar-area">
+
+                    <!-- ***** Single Widget ***** -->
+                    <div class="single-widget newsletter-widget mb-50">
+                        <!-- Section Heading -->
+                        <div class="section-heading style-2 mb-30">
+                            <h4>{{user.username}}</h4>
+                            <div class="line"></div>
+                        </div>
+                        <p>{{user.email}}</p>
+                        <!-- Newsletter Form -->
+                        <div class="newsletter-form">
+                            <form action="{% url 'archive' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn vizew-btn w-100">Archives</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const uploadButton = document.getElementById("submit-button");
+        const loadingSpinner = document.getElementById("loading-spinner");
+
+        uploadButton.addEventListener("click", function (event) {
+            // Show the loading spinner
+            loadingSpinner.style.display = "block";
+        });
+    });
+</script>
+
+
+
+{% endblock content %}
