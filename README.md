@@ -30,9 +30,7 @@ The Video Moment Retrieval App is a sophisticated web application that leverages
 
 - **TensorFlow**: Deep learning models are implemented using TensorFlow, providing accurate video analysis.
 
-- **NumPy**: A fundamental library for numerical operations and data manipulation.
-
-- **Frontend Magic**: The frontend is elegantly crafted using HTML, CSS, and JavaScript to ensure a responsive and interactive user interface.
+- **Frontend**: The frontend is elegantly crafted using HTML, CSS, and JavaScript to ensure a responsive and interactive user interface.
 
 ## Real-Life Applications 🌐
 
