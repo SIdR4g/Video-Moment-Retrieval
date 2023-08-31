@@ -70,6 +70,8 @@ To run the app locally, follow these steps:
 
 We welcome contributions to enhance this project.
 
+## Sample Video Link
+ [VMR sample video](https://www.youtube.com/watch?v=3WkJo9h7SbI&ab_channel=SharadSaha)
 
 ## Contact Us 📧
 
